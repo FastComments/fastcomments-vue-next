@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {FastCommentsConfig} from "../../fastcomments-typescript/src";
+    import {FastCommentsConfig} from '../node_modules/fastcomments-typescript/src';
 
     async function insertScript(src: string, id: string, parentElement: Element) {
         return new Promise((resolve, reject) => {
@@ -23,8 +23,8 @@
     }
 
     // let fcInstance = null;
-    export default{
-        name: 'FastcommentsVue', // vue component name
+    export default {
+        name: 'FastcommentsVueNext', // vue component name
         props: {
             config: {
                 type: Object as () => FastCommentsConfig
@@ -44,7 +44,7 @@
             lastWidgetInstance = window.FastCommentsUI(document.getElementById(this.widgetId), this.config);
         },
         watch: {
-            config(newConfig) {
+            config(newConfig : FastCommentsConfig) {
                 reset(newConfig);
             },
         },
