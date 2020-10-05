@@ -1,17 +1,21 @@
 {
   "name": "fastcomments-vue-next",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "winrid",
   "license": "MIT",
   "repository": "fastcomments/fastcomments-vue-next",
   "description": "A Vue 3.0 library for FastComments",
+  "main": "dist/fastcomments-vue-next.umd.js",
+  "browser": "dist/fastcomments-vue-next.umd.js",
+  "module": "dist/fastcomments-vue-next.umd.js",
+  "unpkg": "dist/fastcomments-vue-next.umd.js",
   "files": [
     "dist/*",
     "src/**/*.vue"
   ],
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build src/fastcomments-vue-next.vue --target lib --name fastcomments-vue-next",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
