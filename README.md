@@ -48,6 +48,15 @@ export default Vue.extend({
 </template>
 ```
 
+## Updating The Current Page (SPA Example)
+
+In FastComments we call the article id, or page the comments get tied to, the URL ID as it can be a url or an ID.
+Define the URL ID in the following manner. The component watches for changes in config object, and will reload, so you can update the URL ID.
+
+```vue
+<fast-comments-vue-next v-bind:config="{tenantId: 'demo', urlId: 'some-page-id'}" />
+```
+
 ## Contributing
 Please checkout our [contribution guidelines](CONTRIBUTING.md) before starting on a change. Remember to communicate first!
 
