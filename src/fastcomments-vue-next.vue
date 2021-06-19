@@ -38,7 +38,7 @@
         async mounted() {
             // @ts-ignore
             if (window && !window.FastCommentsUI) {
-                await insertScript('https://cdn.fastcomments.com/js/embed.min.js', 'fastcomments-widget-script', window.document.body);
+                await insertScript('https://cdn.fastcomments.com/js/embed-v2.min.js', 'fastcomments-widget-script', window.document.body);
             }
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsUI(document.getElementById(this.widgetId), this.config);
