@@ -1,6 +1,6 @@
 {
   "name": "fastcomments-vue-next",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": "winrid",
   "license": "MIT",
   "repository": "fastcomments/fastcomments-vue-next",
@@ -15,7 +15,8 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
-    "build": "vue-cli-service build src/fastcomments-vue-next.vue --target lib --name fastcomments-vue-next",
+    "serve-live-chat": "vue-cli-service serve dev/serve-live-chat.ts",
+    "build": "vue-cli-service build src/main.ts --target lib --name fastcomments-vue-next",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -27,7 +28,7 @@
     "@vue/cli-plugin-typescript": "^4.3.1",
     "@vue/cli-service": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0-0",
-    "fastcomments-typescript": "^1.5.7",
+    "fastcomments-typescript": "^1.5.12",
     "typescript": "^3.8.3"
   }
 }
