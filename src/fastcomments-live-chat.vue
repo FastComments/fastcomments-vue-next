@@ -20,6 +20,7 @@
         if (lastWidgetInstance) {
             lastWidgetInstance.update(config);
         }
+    }
 
     // let fcInstance = null;
     export default {
