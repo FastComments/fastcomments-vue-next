@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {FastCommentsCommentWidgetConfig} from '../node_modules/fastcomments-typescript/src';
+    import {FastCommentsLiveChatWidgetConfig} from 'fastcomments-typescript/src';
 
     async function insertScript(src: string, id: string, parentElement: Element) {
         return new Promise((resolve, reject) => {
@@ -16,7 +16,7 @@
 
     // noinspection TypeScriptExplicitMemberType
     let lastWidgetInstance: { update: (arg0: any) => void; } | null = null;
-    function reset(config : FastCommentsCommentWidgetConfig) {
+    function reset(config : FastCommentsLiveChatWidgetConfig) {
         if (lastWidgetInstance) {
             lastWidgetInstance.update(config);
         }
@@ -24,27 +24,27 @@
 
     // let fcInstance = null;
     export default {
-        name: 'FastcommentsVueNext', // vue component name
+        name: 'FastCommentsLiveChat', // vue component name
         props: {
             config: {
-                type: Object as () => FastCommentsCommentWidgetConfig
+                type: Object as () => FastCommentsLiveChatWidgetConfig
             }
         },
         data() {
             return {
-                widgetId: `fastcomments-widget-${Math.random()}-${Date.now()}`
+                widgetId: `fastcomments-live-chat-widget-${Math.random()}-${Date.now()}`
             }
         },
         async mounted() {
             // @ts-ignore
-            if (window && !window.FastCommentsUI) {
-                await insertScript('https://cdn.fastcomments.com/js/embed-v2.min.js', 'fastcomments-widget-script', window.document.body);
+            if (window && !window.FastCommentsLiveChat) {
+                await insertScript('https://cdn.fastcomments.com/js/embed-live-chat.min.js', 'fastcomments-live-chat-widget-script', window.document.body);
             }
             // @ts-ignore
-            lastWidgetInstance = window.FastCommentsUI(document.getElementById(this.widgetId), this.config);
+            lastWidgetInstance = window.FastCommentsLiveChat(document.getElementById(this.widgetId), this.config);
         },
         watch: {
-            config(newConfig : FastCommentsCommentWidgetConfig) {
+            config(newConfig : FastCommentsLiveChatWidgetConfig) {
                 reset(newConfig);
             },
         },
@@ -52,7 +52,7 @@
 </script>
 
 <template>
-    <div class="fastcomments-vue">
+    <div class="fastcomments-live-chat">
         <div v-bind:id="widgetId"></div>
     </div>
 </template>

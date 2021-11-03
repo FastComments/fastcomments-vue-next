@@ -1,2 +1,2 @@
-export * as FastCommentsVueNext from './fastcomments-vue-next.vue';
-export * as FastCommentsLiveChat from './fastcomments-live-chat.vue';
+export { default as FastComments } from './components/fastcomments.vue';
+export { default as FastCommentsLiveChat } from './components/fastcomments-live-chat.vue';
