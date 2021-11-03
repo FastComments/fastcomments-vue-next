@@ -29,22 +29,18 @@ Replace "demo" below with your "tenantId" - available [here](https://fastcomment
 The widget supports a lot of options - see FastCommentsConfig [here](https://github.com/FastComments/fastcomments-typescript/blob/eae973fb7885de4df58b21b7a22a3e40c89feefa/src/fastcomments-config.ts#L14).
 
 ```vue
-<script lang="ts">
-import FastCommentsVueNext from 'fastcomments-vue-next';
-
-export default {
-  name: 'ServeDev',
-  components: {
-    FastCommentsVueNext
-  }
-};
-</script>
-
 <template>
-  <div id="app">
-    <fast-comments-vue-next v-bind:config="{tenantId: 'demo'}" />
-  </div>
+  <FastComments v-bind:config="{tenantId: 'demo'}" />
 </template>
+<script>
+import { FastComments } from 'fastcomments-vue-next'
+export default {
+  name: 'FastCommentsExample',
+  components: {
+    FastComments
+  }
+}
+</script>
 ```
 
 ## Updating The Current Page (SPA Example)
@@ -53,7 +49,15 @@ In FastComments we call the article id, or page the comments get tied to, the UR
 Define the URL ID in the following manner. The component watches for changes in config object, and will reload, so you can update the URL ID.
 
 ```vue
-<fast-comments-vue-next v-bind:config="{tenantId: 'demo', urlId: 'some-page-id'}" />
+<FastComments v-bind:config="{tenantId: 'demo', urlId: 'some-page-id'}" />
+```
+
+## All Widgets and Documentation
+
+Run the local documentation:
+
+```bash
+npm run serve
 ```
 
 ## Contributing
