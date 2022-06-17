@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "vue": "^3.2.37",
-    "vitepress": "^0.20.0",
+    "vitepress": "^0.22.4",
     "fastcomments-typescript": "^1.6.20"
   },
   "devDependencies": {
