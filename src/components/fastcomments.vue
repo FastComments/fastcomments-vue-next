@@ -38,7 +38,9 @@
         async mounted() {
             // @ts-ignore
             if (window && !window.FastCommentsUI) {
-                await insertScript('https://cdn.fastcomments.com/js/embed-v2.min.js', 'fastcomments-widget-script', window.document.body);
+                // @ts-ignore
+                const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-v2.min.js' : 'https://cdn.fastcomments.com/js/embed-v2.min.js';
+                await insertScript(src, 'fastcomments-widget-script', window.document.body);
             }
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsUI(document.getElementById(this.widgetId), this.config);

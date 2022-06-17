@@ -38,7 +38,9 @@
         async mounted() {
             // @ts-ignore
             if (window && !window.FastCommentsLiveChat) {
-                await insertScript('https://cdn.fastcomments.com/js/embed-live-chat.min.js', 'fastcomments-live-chat-widget-script', window.document.body);
+                // @ts-ignore
+                const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-live-chat.min.js' : 'https://cdn.fastcomments.com/js/embed-live-chat.min.js';
+                await insertScript(src, 'fastcomments-live-chat-widget-script', window.document.body);
             }
             // @ts-ignore
             lastWidgetInstance = window.FastCommentsLiveChat(document.getElementById(this.widgetId), this.config);
