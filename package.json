@@ -21,14 +21,14 @@
     "serve": "vitepress dev docs"
   },
   "dependencies": {
-    "vue": "^3.2.16",
-    "vitepress": "^0.20.0",
+    "vue": "^3.2.37",
+    "vitepress": "^0.22.4",
     "fastcomments-typescript": "^1.6.21"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
-    "typescript": "^4.4.3",
-    "vite": "^2.6.4",
-    "vue-tsc": "^0.3.0"
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.7.3",
+    "vite": "^2.9.12",
+    "vue-tsc": "^0.37.9"
   }
 }
