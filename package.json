@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "vue": "^3.2.37",
-    "fastcomments-typescript": "^1.6.21"
+    "fastcomments-typescript": "^1.6.27"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
