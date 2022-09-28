@@ -21,7 +21,7 @@
     "serve": "vitepress dev docs"
   },
   "dependencies": {
-    "vue": "^3.2.37",
+    "vue": "^3.2.40",
     "fastcomments-typescript": "^2.0.0"
   },
   "devDependencies": {
