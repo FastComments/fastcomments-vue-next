@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {FastCommentsLiveChatWidgetConfig} from 'fastcomments-typescript/src';
+    import {FastCommentsLiveChatWidgetConfig} from 'fastcomments-typescript';
 
     async function insertScript(src: string, id: string, parentElement: Element) {
         return new Promise((resolve, reject) => {

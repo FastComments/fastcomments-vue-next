@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {FastCommentsCommentWidgetConfig} from 'fastcomments-typescript/src';
+    import {FastCommentsCommentWidgetConfig} from 'fastcomments-typescript';
 
     async function insertScript(src: string, id: string, parentElement: Element) {
         return new Promise((resolve, reject) => {
