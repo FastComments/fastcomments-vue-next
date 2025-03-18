@@ -16,3 +16,8 @@ For a full list of configuration options, see [fastcomments-typescript](https://
 <script setup>
 import { FastComments } from '../../../src/main'
 </script>
+
+## In Production
+
+You probably don't want to define the config inline if you're passing callbacks etc. Instead, you'll want to define
+the config using `computed()`, otherwise each time your callback etc is invoked the entire widget will re-render.
