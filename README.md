@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/fastcomments-vue-next.svg)](https://www.npmjs.com/package/fastcomments-vue-next) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Live Demo
+
+Try every widget live at <https://fastcomments.com/commenting-system-for-vue>.
+
 ## Live Showcase
 
 To see every widget and flow running locally against the public `demo` tenant, clone the repo and run:
