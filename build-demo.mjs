@@ -15,7 +15,7 @@ const sh = (cmd, cwd = ROOT) => {
 };
 
 sh('npm ci');
-sh('npx vite build --config vite.demo.config.ts');
+sh('./node_modules/.bin/vite build --config vite.demo.config.ts');
 
 rmSync(OUT, { recursive: true, force: true });
 renameSync(resolve(ROOT, 'demo-build'), OUT);
