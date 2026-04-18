@@ -1,4 +1,5 @@
 <script lang="ts">
+    import {defineComponent, PropType} from 'vue';
     import {FastCommentsImageChatWidgetConfig} from 'fastcomments-typescript';
 
     async function insertScript(src: string, id: string, parentElement: Element) {
@@ -22,14 +23,15 @@
         }
     }
 
-    export default {
+    export default defineComponent({
         name: 'FastCommentsImageChat', // vue component name
         props: {
             config: {
                 type: Object as () => FastCommentsImageChatWidgetConfig
             },
             targetRef: {
-              default: null
+                type: Object as PropType<HTMLElement | null>,
+                default: null
             }
         },
         data() {
@@ -44,19 +46,21 @@
                 const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-image-chat.min.js' : 'https://cdn.fastcomments.com/js/embed-image-chat.min.js';
                 await insertScript(src, 'fastcomments-image-chat-widget-script', window.document.body);
             }
+            const target = this.targetRef || document.getElementById(this.widgetId);
+            if (!target) return;
             // @ts-ignore
-            lastWidgetInstance = window.FastCommentsImageChat(this.targetRef, this.config);
+            lastWidgetInstance = window.FastCommentsImageChat(target, this.config);
         },
         watch: {
             config(newConfig : FastCommentsImageChatWidgetConfig) {
                 reset(newConfig);
             },
         },
-    }
+    })
 </script>
 
 <template>
     <div class="fastcomments-image-chat">
-        <div v-bind:id="widgetId"></div>
+        <div v-bind:id="widgetId"><slot /></div>
     </div>
 </template>

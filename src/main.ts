@@ -1,4 +1,10 @@
 export { default as FastComments } from './components/fastcomments.vue';
 export { default as FastCommentsCollabChat } from './components/fastcomments-collab-chat.vue';
+export { default as FastCommentsCommentCount } from './components/fastcomments-comment-count.vue';
 export { default as FastCommentsImageChat } from './components/fastcomments-image-chat.vue';
 export { default as FastCommentsLiveChat } from './components/fastcomments-live-chat.vue';
+export { default as FastCommentsRecentComments } from './components/fastcomments-recent-comments.vue';
+export { default as FastCommentsRecentDiscussions } from './components/fastcomments-recent-discussions.vue';
+export { default as FastCommentsReviewsSummary } from './components/fastcomments-reviews-summary.vue';
+export { default as FastCommentsTopPages } from './components/fastcomments-top-pages.vue';
+export { default as FastCommentsUserActivityFeed } from './components/fastcomments-user-activity-feed.vue';

@@ -4,6 +4,17 @@
 
 [![NPM](https://img.shields.io/npm/v/fastcomments-vue-next.svg)](https://www.npmjs.com/package/fastcomments-vue-next) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Live Showcase
+
+To see every widget and flow running locally against the public `demo` tenant, clone the repo and run:
+
+```bash
+npm install
+npm run dev
+```
+
+The showcase entry point lives in `src/App.vue` and `index.html` — each widget/flow is rendered in the same app you can copy into your own Vue 3 project.
+
 ## Installation
 
 ### NPM
@@ -81,3 +92,7 @@ Please check out our [contribution guidelines](CONTRIBUTING.md) before starting 
 ## License
 
 MIT © [winrid](https://github.com/winrid)
+
+## Maintenance Status
+
+These components are wrappers around our core VanillaJS components. We can automatically update these components (fix bugs, add features) without publishing this library, so while it may not be published for a while that does not mean FastComments is not under active development! Feel free to check [our blog](https://blog.fastcomments.com/) for updates. Breaking API changes or features will never be shipped to the underlying core library without a version bump in this library.

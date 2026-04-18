@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>FastComments Vue 3 Showcase</title>
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem('fc-showcase-theme');
+          if (s !== 'light' && s !== 'dark') {
+            s = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-fc-theme', s);
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/serve.ts"></script>
   </body>
 </html>

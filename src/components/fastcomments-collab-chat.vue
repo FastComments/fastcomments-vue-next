@@ -1,4 +1,5 @@
 <script lang="ts">
+    import {defineComponent, PropType} from 'vue';
     import {FastCommentsCollabChatWidgetConfig} from 'fastcomments-typescript';
 
     async function insertScript(src: string, id: string, parentElement: Element) {
@@ -22,14 +23,15 @@
         }
     }
 
-    export default {
+    export default defineComponent({
         name: 'FastCommentsCollabChat', // vue component name
         props: {
             config: {
                 type: Object as () => FastCommentsCollabChatWidgetConfig
             },
             targetRef: {
-              default: null
+                type: Object as PropType<HTMLElement | null>,
+                default: null
             }
         },
         data() {
@@ -44,19 +46,21 @@
                 const src = this.config.region === 'eu' ? 'https://cdn-eu.fastcomments.com/js/embed-collab-chat.min.js' : 'https://cdn.fastcomments.com/js/embed-collab-chat.min.js';
                 await insertScript(src, 'fastcomments-collab-chat-widget-script', window.document.body);
             }
+            const target = this.targetRef || document.getElementById(this.widgetId);
+            if (!target) return;
             // @ts-ignore
-            lastWidgetInstance = window.FastCommentsCollabChat(this.targetRef, this.config);
+            lastWidgetInstance = window.FastCommentsCollabChat(target, this.config);
         },
         watch: {
             config(newConfig : FastCommentsCollabChatWidgetConfig) {
                 reset(newConfig);
             },
         },
-    }
+    })
 </script>
 
 <template>
     <div class="fastcomments-collab-chat">
-        <div v-bind:id="widgetId"></div>
+        <div v-bind:id="widgetId"><slot /></div>
     </div>
 </template>

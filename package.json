@@ -1,6 +1,6 @@
 {
   "name": "fastcomments-vue-next",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "author": "winrid",
   "license": "MIT",
   "files": [
@@ -17,6 +17,7 @@
   "unpkg": "./dist/fastcomments-vue-next.umd.js",
   "jsdelivr": "./dist/fastcomments-vue-next.umd.js",
   "scripts": {
+    "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vitepress dev docs"
   },
