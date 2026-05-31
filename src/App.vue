@@ -450,7 +450,7 @@ async function copyCode() {
           <button type="button" class="fc-theme-toggle__btn" :class="{ 'is-active': theme === 'dark' }" @click="setTheme('dark')">Dark</button>
         </div>
         <div><code>npm i fastcomments-vue-next</code></div>
-        <a href="https://fastcomments.com" rel="noopener">fastcomments.com ↗</a>
+        <a href="https://fastcomments.com" rel="noopener">fastcomments.com</a>
       </footer>
     </aside>
 
