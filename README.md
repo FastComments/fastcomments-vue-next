@@ -6,7 +6,7 @@
 
 ## Live Demo
 
-Try every widget live at <https://fastcomments.com/commenting-system-for-vue>.
+Try every widget live at <https://fastcomments.com/commenting-system-for-vue/>.
 
 ## Live Showcase
 
